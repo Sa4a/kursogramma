@@ -1,0 +1,153 @@
+// Only Comparing Table 1 is converted to Less so far
+
+.comparing-table-1-container {
+	.comparing-box {
+		position: relative;
+		margin-bottom: 20px;
+		border: 2px solid @border-darker;
+		border-radius: @border-radius-base;
+		transition: all 0.25s ease 0s;
+		-moz-transition: all 0.25s ease 0s;
+		-webkit-transition: all 0.25s ease 0s;
+		-o-transition: all 0.25s ease 0s;
+
+		.comparing-head {
+			text-align: center;
+			h3, h4 {
+				&.comparing-head-title {
+					text-transform: uppercase;
+					letter-spacing: 0.1em;
+					font-size: @font-size-base;
+					font-weight: 400;
+					margin: -2px -2px 0;
+					padding: 11px 0;
+					border-radius: @border-radius-base @border-radius-base 0 0;
+				} 
+				margin: 0;
+				line-height: normal;
+				span {
+					display: block;
+					margin-top: 5px;
+					font-size: @font-size-mini;
+					font-style: italic;
+				}
+			}
+			h3 {
+				font-weight: 300;
+				color: #fff;
+				padding: 10px 0;
+			}
+			h4 {
+				color: @gray-dark;
+				padding: 10px 0;
+				font-size: 28px;
+				font-weight: 400;
+				background-color: rgba(0, 0, 0, 0.015);
+				border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+				i {
+					top: 0px;
+					font-weight: 300;
+					font-size: 26px;
+					font-style: normal;
+					position: relative;
+				}
+				span {
+					top: -10px;
+					font-size: @font-size-mini;
+					font-style: normal;
+					font-weight: 400;
+					position: relative;
+				}
+			}
+		}
+		&:hover {
+			transition: all 0.25s ease 0s;
+			-moz-transition: all 0.25s ease 0s;
+			-webkit-transition: all 0.25s ease 0s;
+			-o-transition: all 0.25s ease 0s;
+			z-index: 9;
+		}
+		.comparing-footer {
+			color: @gray-light;
+			font-size: @font-size-mini;
+			text-align: center;
+			padding: 20px;
+			p {margin-bottom: 20px;}
+			background-color: rgba(0, 0, 0, 0.015)
+		}
+		&.comparing-active {
+			transition: all 0.25s ease 0s;
+			-moz-transition: all 0.25s ease 0s;
+			-webkit-transition: all 0.25s ease 0s;
+			-o-transition: all 0.25s ease 0s;
+		}
+
+		.comparing-content {
+			margin-bottom: 0;
+
+			li {
+				color: @gray-dark;
+				font-size: @font-size-base;
+				text-align: center;
+				padding: 10px 15px;
+				border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+				i {
+					color: @gray-light;
+					margin-right: 5px;
+				  	font-size: @font-size-mini;
+				}
+				&:hover {
+					//color: @gray-dark;
+				}
+			}
+		}
+	}
+}
+
+
+.comparing-table-1-container {
+	&.comparing-info 			{.comparing-variant-1(@brand-info);}
+	&.comparing-success 		{.comparing-variant-1(@brand-success);}
+	&.comparing-danger 		{.comparing-variant-1(@brand-danger);}
+	&.comparing-warning 		{.comparing-variant-1(@brand-warning);}
+	&.comparing-primary 		{.comparing-variant-1(@brand-primary);}
+	&.comparing-inverse 		{.comparing-variant-1(@brand-inverse);}
+
+	&.comparing-midnightblue 	{.comparing-variant-1(@brand-midnightblue)}
+	&.comparing-sky 			{.comparing-variant-1(@brand-sky);}
+	&.comparing-orange 		{.comparing-variant-1(@brand-orange)};
+	&.comparing-indigo 		{.comparing-variant-1(@brand-indigo)};
+	&.comparing-green 		{.comparing-variant-1(@brand-green);}
+	&.comparing-magenta  		{.comparing-variant-1(@brand-magenta);}
+	&.comparing-purple  		{.comparing-variant-1(@brand-purple);}
+	&.comparing-brown  		{.comparing-variant-1(@brand-brown);}
+	&.comparing-grape			{.comparing-variant-1(@brand-grape);}
+
+	&.comparing-toyo			{.comparing-variant-1(@brand-toyo);}
+	&.comparing-alizarin		{.comparing-variant-1(@brand-alizarin);}
+
+}
+
+
+.comparing-variant-1(@color-variant) {
+	.comparing-box {
+		h3 {
+			background: @color-variant;
+		}
+
+		&:hover {
+			border: 2px solid @color-variant;
+			h4 {
+				color: @color-variant;
+			}
+		}
+		&.comparing-active {
+			border: 2px solid @color-variant;
+			.comparing-head h4 {
+				color: @color-variant;
+				background: rgba(red(@color-variant), green(@color-variant), blue(@color-variant), 0.03);
+				border-bottom: 1px dashed rgba(red(@color-variant), green(@color-variant), blue(@color-variant), 0.09);
+			}
+		}
+	}
+}

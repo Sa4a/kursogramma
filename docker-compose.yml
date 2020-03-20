@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: kursogramma
+    ports:
+      - 8001:80
+      - 443:443
+    volumes:
+      - ./:/var/www/html
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+      - ./docker/nginx/logs:/var/log/nginx/
+    depends_on:
+      - app
+    restart: always
+
+  app:
+    build:
+      context: docker/app
+    container_name: kursogramma_app
+    volumes:
+      - ./:/var/www/html
+      - ./docker/php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    ports:
+      - 9002:9000
+    depends_on:
+      - db
+      - mongodb
+    restart: always
+
+  db:
+    image: mariadb:5.5.60
+    container_name: kursogramma_db
+    volumes:
+      - ./db:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=kursogramma_db
+      - MYSQL_DATABASE=kursogramma_db
+    restart: always
+
+  mongodb:
+    image: mongo:3.2.8
+    container_name: kursogramma_mongodb
+    environment:
+      - MONGO_DATA_DIR=/docker/mongodb
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - ./docker/mongodb:/data/mongodb
+      #- ./mongodb:/mongodb
+    ports:
+      - 28017:27017
+    command: mongod --smallfiles --logpath=/dev/null # --quiet
