@@ -8,6 +8,13 @@ return [
             'password' => 'root',
             'charset' => 'utf8',
         ],
+        'ishop_db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=kursogramma_db;dbname=ishop',
+            'username' => 'root',
+            'password' => 'root',
+            'charset' => 'utf8',
+        ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@common/mail',

@@ -1,0 +1,30 @@
+.editor_fields{
+    background: #ddd;
+    width: 30%;
+    min-height: 200px;
+    z-index: 1000;
+    padding: 10px;
+    top:0px;
+}
+
+
+.sortable {
+    border: 2px solid #000;
+    margin: 10px;
+}
+.sortable:hover{
+    border: 2px solid #3ebe2a;
+}
+
+.admin_slider_preview img{
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.admin_slider_preview img:hover {
+    border: 2px solid #3ebe2a;
+}
+.slider_item img{
+    width: 100%;
+    height: 300px;
+}

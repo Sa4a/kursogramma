@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\helpers\FileHelper;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "module".
@@ -34,8 +36,29 @@ class Module extends \yii\db\ActiveRecord
             [['name', 'course_id'], 'required'],
             [['course_id'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
+            [['description'], 'string'],
+            [['image'], 'image', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg', 'on' => ['insert', 'update']],
             [['name'], 'string', 'max' => 255],
-            [['name'], 'unique'],
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => \mohorev\file\UploadImageBehavior::class,
+                'attribute' => 'image',
+                'scenarios' => ['insert', 'update'],
+                'path' => '@static/'.self::tableName().'/{id}',
+                'url' => '@web/uploads/'.self::tableName().'/{id}',
+                'thumbs' => [
+                    'thumb' => ['width' => 400, 'quality' => 90],
+                    'preview' => ['width' => 200, 'height' => 200],
+                ],
+            ],
         ];
     }
 
@@ -47,6 +70,8 @@ class Module extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
+            'description' => 'Описание',
+            'image' => 'Превью',
             'course_id' => 'Course ID',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',

@@ -5,6 +5,7 @@
 
 # phpstorm project files
 .idea
+.idea/*
 
 # netbeans project files
 nbproject
@@ -41,3 +42,5 @@ phpunit.phar
 /backend/web/index.php
 /backend/web/index-test.php
 /backend/web/robots.txt
+
+/app/uploads/*

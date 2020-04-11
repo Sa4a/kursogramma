@@ -33,17 +33,31 @@ return [
                 ],
             ],
         ],
+        'domain' => [
+            'class' => 'common\components\LoaderDomainOptions'
+        ],
+
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'goods/item/<slug:[\w\/-]+>/' => 'catalog/item',
+                'goods/<slug:[\w\/-]+>/' => 'catalog/index',
+                [
+                    'pattern' => 'goods',
+                    'route' => 'catalog/index',
+                    'suffix' => '/',
+                ],
+                [
+                    'pattern' => '<slug:[\w\/-]+>',
+                    'route' => 'static/index',
+                    'suffix' => '/',
+                ],
             ],
         ],
-        */
     ],
     'params' => $params,
 ];

@@ -51,7 +51,7 @@ services:
       - MONGO_LOG_DIR=/dev/null
     volumes:
       - ./docker/mongodb:/data/mongodb
-      #- ./mongodb:/mongodb
+      - ./mongodb:/mongodb
     ports:
       - 28017:27017
     command: mongod --smallfiles --logpath=/dev/null # --quiet

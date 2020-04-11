@@ -76,3 +76,4 @@ RUN chown -R www-data:www-data /var/www
 
 RUN composer create-project --prefer-dist yiisoft/yii2-app-advanced yii-application
 RUN composer global require "fxp/composer-asset-plugin:~1.3"
+RUN npm install -g less

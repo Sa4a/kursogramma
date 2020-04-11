@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="kursogramma_db@localhost" uuid="98747382-28ec-42af-a7ad-1fb5d382ca0a">
+      <database-info product="MariaDB" version="5.5.60-MariaDB-1~trusty" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.4.1">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:kursogramma_db</introspection-schemas>
+    </data-source>
+    <data-source name="ishop@localhost" uuid="0523a6e8-d763-4582-8d53-513ff45be578">
+      <database-info product="MariaDB" version="5.5.60-MariaDB-1~trusty" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.4.1">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:ishop</introspection-schemas>
+    </data-source>
+  </component>
+</project>

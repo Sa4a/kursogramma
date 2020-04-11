@@ -1,0 +1,9 @@
+
+f	php:S1192"LDefine a constant instead of duplicating this literal "{{%module}}" 5 times.(‹ƒå8Àıçƒ“.
+k	php:S1192"LDefine a constant instead of duplicating this literal "{{%lesson}}" 5 times.(°ï±Œùÿÿÿÿ8Àıçƒ“.
+j	php:S1192"KDefine a constant instead of duplicating this literal "updated_at" 3 times.(¤¢ãüıÿÿÿÿ8Àıçƒ“.
+j	php:S1192"KDefine a constant instead of duplicating this literal "created_at" 3 times.(§ü¡Œüÿÿÿÿ8Àıçƒ“.
+f	php:S1192"LDefine a constant instead of duplicating this literal "{{%course}}" 4 times.(¥´ß¦8Àıçƒ“.
+php:S101"cRename class "m200319_082624_add_start_tables" to match the regular expression ^[A-Z][a-zA-Z0-9]*$.(¼øø¼øÿÿÿÿ8Àıçƒ“.
+d	php:S1192"JDefine a constant instead of duplicating this literal "course_id" 3 times.(·Çó8Àıçƒ“.
+d	php:S1192"JDefine a constant instead of duplicating this literal "module_id" 3 times.(ı¦Ïï8Àıçƒ“.

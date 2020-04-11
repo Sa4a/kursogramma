@@ -1,0 +1,5 @@
+
+Q	php:S1481"2Remove this unused "$sort_by_name" local variable.(èƒ†ëøÿÿÿÿ8ıÏÃÌ•.
+e	php:S1192"FDefine a constant instead of duplicating this literal "depth" 4 times.(ïü®Ÿøÿÿÿÿ8ıÏÃÌ•.
+o	php:S1192"PDefine a constant instead of duplicating this literal "domain_clone_id" 4 times.(»¶şøúÿÿÿÿ8ıÏÃÌ•.
+d	php:S1192"JDefine a constant instead of duplicating this literal "domain_id" 4 times.(ÅûüÑ8ıÏÃÌ•.

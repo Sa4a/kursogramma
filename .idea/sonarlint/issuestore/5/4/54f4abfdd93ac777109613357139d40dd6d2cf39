@@ -1,0 +1,14 @@
+
+Bjavascript:S1116"Remove this empty statement.(”ι­ϊÿÿÿÿ8ρι”°‘.
+Xjavascript:S1854"7Remove this useless assignment to local variable "base"(Ε€Τα8ρι”°‘.
+]javascript:S1854"7Remove this useless assignment to local variable "elem"(¨ρέΤψÿÿÿÿ8ρι”°‘.
+djavascript:UnusedVariable"5Remove the declaration of the unused 'elem' variable.(¨ρέΤψÿÿÿÿ8ρι”°‘.
+njavascript:S2814"MRename "newPosition" as this name is already used in declaration at line 987.(ψ®ξλ8ρι”°‘.
+_javascript:UnusedVariable"5Remove the declaration of the unused 'base' variable.(Ε€Τα8ρι”°‘.
+hjavascript:S2814"GRename "event" as this name is already used in declaration at line 913.(γ 8ρι”°‘.
+[javascript:S1854":Remove this useless assignment to local variable "closest"(ψίεΟ8ρι”°‘.
+mjavascript:S2814"GRename "width" as this name is already used in declaration at line 320.(ΑΡΈϊÿÿÿÿ8ρι”°‘.
+hjavascript:S2814"GRename "event" as this name is already used in declaration at line 878.(γ 8ρι”°‘.
+bjavascript:S2137"ADo not use "undefined" to declare a parameter - use another name.(ÿ¨±Φ8ρι”°‘.
+hjavascript:S2814"GRename "event" as this name is already used in declaration at line 949.(γ 8ρι”°‘.
+[javascript:S1854":Remove this useless assignment to local variable "closest"(Ϋή„8ρι”°‘.

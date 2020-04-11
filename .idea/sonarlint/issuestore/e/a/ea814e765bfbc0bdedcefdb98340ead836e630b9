@@ -1,0 +1,15 @@
+
+P	php:S1068"6Remove this unused "$max_catalog_depth" private field.(¤ºÓ‚8¼œ¡È•.
+f	php:S1117"LRename "$prodamus" which has the same name as the field declared at line 15.(Šçœ8¼œ¡È•.
+c	php:S1192"IDefine a constant instead of duplicating this literal "urlParts" 3 times.(´½ãğ8¼œ¡È•.
+V	php:S1068"7Remove this unused "$products_sort_mode" private field.(¾ç¼®ûÿÿÿÿ8¼œ¡È•.
+g	php:S1192"MDefine a constant instead of duplicating this literal "__service__" 14 times.(ÒÔ¨Ô8¼œ¡È•.
+d	php:S1192"JDefine a constant instead of duplicating this literal "domain_id" 5 times.(ÅûüÑ8¼œ¡È•.
+n	php:S3776"TRefactor this function to reduce its Cognitive Complexity from 28 to the 15 allowed.(Äî›©8¼œ¡È•.
+f	php:S1192"GDefine a constant instead of duplicating this literal "depth" 12 times.(ïü®Ÿøÿÿÿÿ8¼œ¡È•.
+php:S138"ƒThis function "getCatalogStructure" has 176 lines, which is greater than the 150 lines authorized. Split it into smaller functions.(Äî›©8¼œ¡È•.
+M	php:S1068"4Remove this unused "$base_catalog_id" private field.(òƒĞ8¼œ¡È•.
+o	php:S1192"PDefine a constant instead of duplicating this literal "domain_clone_id" 4 times.(»¶şøúÿÿÿÿ8¼œ¡È•.
+f	php:S1192"GDefine a constant instead of duplicating this literal "parent" 3 times.(‚Ğôğşÿÿÿÿ8¼œ¡È•.
+Y	php:S1068":Remove this unused "$products_compact_mode" private field.(íõûàüÿÿÿÿ8¼œ¡È•.
+P	php:S1068"6Remove this unused "$products_per_page" private field.(–Ÿ¶ó8¼œ¡È•.

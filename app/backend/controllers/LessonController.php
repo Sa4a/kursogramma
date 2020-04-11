@@ -29,6 +29,7 @@ class LessonController extends BaseController
         ];
     }
 
+
     /**
      * Lists all Lesson models.
      * @return mixed

@@ -20,7 +20,7 @@ class m200319_082624_add_start_tables extends Migration
         if (Yii::$app->db->getTableSchema("course",true)===null) {
             $this->createTable('{{%course}}', [
                 'id' => $this->primaryKey(),
-                'name' => $this->string()->notNull()->unique(),
+                'name' => $this->string()->notNull(),
                 'created_at' => $this->timestamp(),
                 'updated_at' => $this->timestamp(),
             ], $tableOptions);
@@ -30,7 +30,7 @@ class m200319_082624_add_start_tables extends Migration
         if (Yii::$app->db->getTableSchema("module",true)===null) {
             $this->createTable('{{%module}}', [
                 'id' => $this->primaryKey(),
-                'name' => $this->string()->notNull()->unique(),
+                'name' => $this->string()->notNull(),
                 'course_id' => $this->integer()->notNull(),
                 'created_at' => $this->timestamp(),
                 'updated_at' => $this->timestamp(),
@@ -43,7 +43,7 @@ class m200319_082624_add_start_tables extends Migration
         if (Yii::$app->db->getTableSchema("lesson",true)===null) {
             $this->createTable('{{%lesson}}', [
                 'id' => $this->primaryKey(),
-                'name' => $this->string()->notNull()->unique(),
+                'name' => $this->string()->notNull(),
                 'module_id' => $this->integer()->notNull(),
                 'created_at' => $this->timestamp(),
                 'updated_at' => $this->timestamp(),
@@ -56,9 +56,11 @@ class m200319_082624_add_start_tables extends Migration
 
     public function down()
     {
-        $this->dropTable('{{%course}}');
-        $this->dropTable('{{%module}}');
         $this->dropTable('{{%lesson}}');
+        $this->dropTable('{{%module}}');
+        $this->dropTable('{{%course}}');
+
+
     }
 
 }

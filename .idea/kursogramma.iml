@@ -26,6 +26,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/fortawesome/font-awesome" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/fzaninotto/faker" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/imagine/imagine" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/mohorev/yii2-upload-behavior" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/opis/closure" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phar-io/manifest" />
@@ -81,6 +83,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/yiisoft/yii2-debug" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/yiisoft/yii2-faker" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/yiisoft/yii2-gii" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/yiisoft/yii2-imagine" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/yiisoft/yii2-swiftmailer" />
     </content>
     <orderEntry type="inheritedJdk" />

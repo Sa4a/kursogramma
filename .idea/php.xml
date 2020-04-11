@@ -82,6 +82,9 @@
       <path value="$PROJECT_DIR$/app/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/app/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/app/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/app/vendor/imagine/imagine" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-imagine" />
+      <path value="$PROJECT_DIR$/app/vendor/mohorev/yii2-upload-behavior" />
     </include_path>
   </component>
 </project>
