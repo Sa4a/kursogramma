@@ -10,13 +10,8 @@ namespace common\repository;
 
 use Yii;
 
-class PageRepository
+class PageRepository extends ProdamusRepository
 {
-
-    protected $domain_page = 'domain_page';
-    protected $domain_page_param_rel = 'domain_page_param_rel';
-    protected $domain_page_param = 'domain_page_param';
-    protected $domain_page_param_type = 'domain_page_param_type';
 
     /**
      * Получить данные страницы по URL
@@ -137,5 +132,6 @@ class PageRepository
 
         return $data;
     }
+
 
 }

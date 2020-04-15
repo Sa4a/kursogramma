@@ -11,6 +11,7 @@ namespace common\components;
 
 use common\models\ishop\Domains;
 use common\models\ishop\DomainsParams;
+use common\repository\PageModuleRepository;
 use common\repository\PageRepository;
 use Yii;
 use yii\base\BaseObject;
@@ -25,13 +26,15 @@ class LoaderDomainOptions extends BaseObject
     protected $page;
     protected $page_param;
     protected $breadcrumbs;
+    protected $pageModuleRep;
 
     /**
      * LoaderDomainOptions constructor.
      * @param array $config
      */
-    public function __construct($config = [], PageRepository $pageRep)
+    public function __construct($config = [], PageRepository $pageRep, PageModuleRepository $pageModuleRep)
     {
+        $this->pageModuleRep = $pageModuleRep;
         $this->domain = Domains::findOne(Yii::$app->params['domain_id']);
         if (!$this->domain) {
             throw new \DomainException("Не найден домен");
@@ -45,6 +48,7 @@ class LoaderDomainOptions extends BaseObject
         $this->page = $pageRep->getPageByUrl($this->domain->domain_id, Yii::$app->request->url);
         $this->page_param = $pageRep->getPageParameters($this->page);
         $this->breadcrumbs = $pageRep->getBreadcrumbs($this->domain->domain_id, Yii::$app->request->url);
+
 
         parent::__construct($config);
     }
@@ -102,14 +106,14 @@ class LoaderDomainOptions extends BaseObject
         $return = [];
         foreach ($this->breadcrumbs as $row) {
             if (isset($row['title']['page_url']) && $row['title']['page_url'] == '/') {
-               continue;
+                continue;
             } else {
-                if($type == 'static'){
+                if ($type == 'static') {
                     $return[] = [
                         'label' => $row['title']['relation_value'],
                         'url' => Url::to($row['title']['page_url'])
                     ];
-                }else{
+                } else {
                     $return[] = [
                         'label' => $row['name']['relation_value'],
                         'url' => Url::to($row['title']['page_url'])
@@ -119,5 +123,20 @@ class LoaderDomainOptions extends BaseObject
             }
         }
         return $return;
+    }
+
+    /**
+     * @param string $code
+     * @return mixed
+     */
+    public function getModuleByCode(string $code)
+    {
+        try {
+            return $this->pageModuleRep->getPageModule(
+                $this->pageModuleRep->getModuleByCode($this->domain->domain_id, Yii::$app->request->url, $code)
+            );
+        } catch (\TypeError $e) {
+            return $e->getMessage();
+        }
     }
 }

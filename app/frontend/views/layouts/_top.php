@@ -6,16 +6,13 @@
  * Time: 12:11
  */
 
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
+use yii\bootstrap4\Nav;
+use yii\bootstrap4\NavBar;
 use yii\helpers\Html;
 
 NavBar::begin([
     'brandLabel' => Html::encode(Yii::$app->domain->getParamByCode('company')),
     'brandUrl' => Yii::$app->homeUrl,
-    'options' => [
-        'class' => 'navbar-inverse navbar-fixed-top',
-    ],
 ]);
 
 $menuElements = explode(PHP_EOL, Yii::$app->domain->getParamByCode('main_menu'));
@@ -39,7 +36,6 @@ if (Yii::$app->user->isGuest) {
         . '</li>';
 }
 echo Nav::widget([
-    'options' => ['class' => 'navbar-nav navbar-right'],
     'items' => $menuItems,
 ]);
 NavBar::end();

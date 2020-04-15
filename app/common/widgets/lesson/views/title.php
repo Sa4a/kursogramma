@@ -28,10 +28,13 @@ $rand=rand(0,1000);
 -->
 <div class="col-md-12 sortable titles<?=$rand?>" data-container_name ="titles<?=$rand?>"  style="padding-top: 50px;"
      data-type="input,input"
+     data-field_name="title_text,footer_text"
      data-fields="title,footer"
-     data-titles="Заголовок, Подзаголовок">
+     data-titles="Заголовок, Подзаголовок"
+     data-code="titleWidget"
+>
     <div class="position-absolute" style="position: absolute;right: 0px;">
-        <button type="button" class="btn-edite btn btn-info">Редактировать</button>
+        <button type="button" class="btn-edite btn btn-info"  >Редактировать</button>
     </div>
         <h1 class="mb-0 title"><?= $title ?></h1>
         <small class="footer"><?= $title_footer ?></small>

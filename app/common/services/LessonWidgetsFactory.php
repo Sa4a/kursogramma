@@ -33,6 +33,16 @@ class LessonWidgetsFactory
         'sliderWidget' => 'Слайдер',
     ];
 
+    public static $widgetsIcon= [
+        'titleWidget' => 'fa fa-header',
+        'textWidget' => 'fa fa-keyboard-o',
+        'imageWidget' => 'fa fa-image',
+        'textImageWidget' => 'fa fa-address-card',
+        'videoWidget' => 'fa fa-file-video',
+        'audioWidget' => 'fa fa-file-audio',
+        'sliderWidget' => 'fa fa-images',
+    ];
+
     protected $widget;
 
     /**
